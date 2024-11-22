@@ -1,0 +1,42 @@
+.our-policies {
+  width: 80%;
+  padding: 40px 0;
+  display: flex !important;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 50px;
+  max-width: 1400px;
+}
+
+.one-policy {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.one-policy img {
+  margin-bottom: 12px;
+  width: 50px;
+}
+
+.one-policy .policy {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: rgb(55,65,81);
+}
+
+.one-policy .policy-2 {
+  color: rgb(107,114,128);
+}
+
+
+@media (max-width: 700px) {
+  .our-policies {
+    flex-direction: column;
+  }
+
+  .one-policy {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

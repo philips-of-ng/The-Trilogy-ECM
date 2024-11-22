@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  margin-block: 30px;
+  margin-inline: auto;
+  max-width: 1400px;
+  width: 95%;
+}
+
+.hero > div {
+  width: 50%;
+}
+
+.hero-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text > div {
+  width: fit-content;
+}
+
+.t1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.t1 span {
+  display: inline-block;
+  width: 60px;
+  height: 3px;
+  background-color: grey;
+}
+
+.t2 {
+  font-family: Prata;
+  font-size: 40px;
+  margin-block: 15px;
+  font-weight: 500;
+}
+
+.t3 {
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.t3 span {
+  display: inline-block;
+  width: 70px;
+  height: 2px;
+  background-color: grey;
+}
+
+.hero-img img {
+  width: 100%;
+  margin: 0 !important;
+}
+
+@media (max-width: 750px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero > div {
+    width: 100%;
+  }
+
+  .hero-text {
+    padding: 50px 0;
+  }
+}

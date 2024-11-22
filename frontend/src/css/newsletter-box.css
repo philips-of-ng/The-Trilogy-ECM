@@ -1,0 +1,51 @@
+.newsletter-box {
+  width: 95%;
+  max-width: 1400px;
+  padding: 40px 0;
+  margin: auto;
+}
+
+.nb-text {
+  width: 95%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.nb-text .t-1 {
+  font-size: 25px;
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.nb-text .t-2 {
+  text-align: center !important;
+  color: rgb(107,114,128);
+  font-size: 1rem;
+}
+
+.newsletter-box form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.newsletter-box form input {
+  padding: 12px 10px;
+  outline: none;
+  width: 70%;
+  max-width: 500px;
+  border: 2px solid black;
+}
+
+.newsletter-box form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  width: 30%;
+  max-width: 130px;
+}

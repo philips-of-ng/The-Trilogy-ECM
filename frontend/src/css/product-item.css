@@ -1,0 +1,32 @@
+.product-item {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product-item:hover .pi-img img {
+  scale: 1.1 !important;
+  transition: 0.5s;
+}
+
+.pi-img {
+  overflow: hidden;
+  transition: 0.3s !important;
+}
+
+.product-item img {
+  width: 100%;
+}
+
+.product-text {
+  padding: 10px 0;
+}
+
+.product-name, .product-price {
+  color: rgb(55,65,81);
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}

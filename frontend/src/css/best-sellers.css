@@ -1,0 +1,36 @@
+.best-sellers {
+  padding: 20px 0;
+
+  max-width: 1400px;
+  margin: auto;
+  width: 95%;
+}
+
+.bs-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-block: 30px;
+}
+
+
+@media (max-width: 1000px) {
+  .bs-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media (max-width: 850px) {
+  .bs-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .bs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
