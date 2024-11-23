@@ -55,7 +55,6 @@
 
 .product-text {
   width: 50%;
-  border: 10px solid blueviolet;
   padding: 12px 0;
 }
 
@@ -113,6 +112,22 @@
 
 .sel-size-btn {
   border: 2px solid orangered;
+}
+
+.add-to-cart {
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 10px 25px;
+}
+
+.added-adv {
+  margin-top: 35px;
+}
+
+.added-adv p {
+  margin: 3px 0;
+  color: rgb(107,114,128);
 }
 
 

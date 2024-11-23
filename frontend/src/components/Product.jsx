@@ -3,6 +3,7 @@ import '../css/product.css'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 import { assets } from '../assets/assets'
+import RelatedProducts from './RelatedProducts'
 
 const Products = () => {
 
@@ -114,8 +115,36 @@ const Products = () => {
             </div>
           </div>
 
+          <button className='add-to-cart'>ADD TO CART</button>
+
+          <div className='added-adv'>
+            <p>100% Original Products</p>
+            <p>Cash on delivery is available on this product</p>
+            <p>Cash return and exchange policy within 7 days</p>
+          </div>
         </div>
 
+      </div>
+
+
+      {/* --------AFTER PRODUCT DATA-------- */}
+
+      <div className='rev-and-descr'>
+        <div>
+          <b>Decription</b>
+          <p>Reviews (134)</p>
+        </div>
+
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus ab optio necessitatibus, dignissimos quos impedit molestias. Similique illum voluptatibus, praesentium odio assumenda, molestiae debitis, id unde totam repellendus omnis.</p>
+
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolore perspiciatis asperiores, praesentium facilis dignissimos aperiam animi nihil veniam ducimus?</p>
+        </div>
+      </div>
+
+
+      <div className='related-products'>
+        <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
       </div>
 
     </div>
