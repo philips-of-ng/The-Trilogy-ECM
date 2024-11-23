@@ -10,16 +10,20 @@ import Contact from './pages/Contact'
 //COMPONENTS
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import SearchBar from './components/SearchBar'
+import Product from './components/Product'
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <SearchBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collections' element={<Collections />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about-us' element={<About />} />
+        <Route path='/product/:productId' element={<Product />} />
       </Routes>
       <Footer />
     </div>
