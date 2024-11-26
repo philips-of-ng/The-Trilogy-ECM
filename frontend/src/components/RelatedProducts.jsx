@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import '../css/related-product.css'
 import { ShopContext } from '../context/ShopContext'
+import ProductItem from './ProductItem'
+import PageTitle from './PageTitle'
 
 
 const RelatedProducts = ({ category, subCategory }) => {
@@ -9,15 +11,13 @@ const RelatedProducts = ({ category, subCategory }) => {
   const [related, setRelated] = useState([])
 
   useEffect(() => {
-   
+
     if (products.length > 0) {
       let productsCopy = products.slice()
 
       productsCopy = productsCopy.filter((item) => category == item.category)
       productsCopy = productsCopy.filter((item) => subCategory == item.subCategory)
-
-      console.log('These are the related products', productsCopy.slice(0, 5));
-      
+      setRelated(productsCopy.slice(0, 5))
     }
 
   }, [products, category, subCategory])
@@ -25,9 +25,21 @@ const RelatedProducts = ({ category, subCategory }) => {
 
 
   return (
-    <div className='related-prod'>
+    <div>
+      <PageTitle className='mb-5' text1={'RELATED'} text2={'PRODUCTS'} />
 
+
+      <div className='related-prod'>
+        {
+          related.map((item, index) => {
+            return (
+              <ProductItem name={item.name} id={item._id} key={index} price={item.price} image={item.image[0]} />
+            )
+          })
+        }
+      </div>
     </div>
+
   )
 }
 

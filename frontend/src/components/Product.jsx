@@ -78,50 +78,53 @@ const Products = () => {
 
 
         {/* PRODUCT INFO HERE */}
-        <div className='product-text'>
-          <h5>{productData.name}</h5>
+        <div className='product-text-prod'>
+          <div>
+            <h4 className='prod-name'>{productData.name}</h4>
 
-          <div className='rev-div'>
-            <div className='stars'>
-              <img src={assets.star_icon} alt="" />
-              <img src={assets.star_icon} alt="" />
-              <img src={assets.star_icon} alt="" />
-              <img src={assets.star_icon} alt="" />
-              <img src={assets.star_dull_icon} alt="" />
+            <div className='rev-div'>
+              <div className='stars'>
+                <img src={assets.star_icon} alt="" />
+                <img src={assets.star_icon} alt="" />
+                <img src={assets.star_icon} alt="" />
+                <img src={assets.star_icon} alt="" />
+                <img src={assets.star_dull_icon} alt="" />
+              </div>
+
+              <p>(132)</p>
             </div>
 
-            <p>(132)</p>
-          </div>
+            <h3 className='prod-price'>{currency}{productData.price}</h3>
 
-          <h4 className='prod-price'>{currency}{productData.price}</h4>
+            <p className='prod-descr'>{productData.description}</p>
 
-          <p className='prod-descr'>{productData.description}</p>
+            <div className='size-div'>
+              <p>Select Size</p>
 
-          <div className='size-div'>
-            <p>Select Size</p>
+              <div>
+                {Array.isArray(productData.sizes) &&
+                  productData.sizes.map((item, index) => (
+                    <button
+                      onClick={() => setSize(item)}
+                      className={`size-btn ${size === item ? 'sel-size-btn' : ''}`}
+                      key={index}
+                    >
+                      {item}
+                    </button>
+                  ))}
 
-            <div>
-              {Array.isArray(productData.sizes) &&
-                productData.sizes.map((item, index) => (
-                  <button
-                    onClick={() => setSize(item)}
-                    className={`size-btn ${size === item ? 'sel-size-btn' : ''}`}
-                    key={index}
-                  >
-                    {item}
-                  </button>
-                ))}
+              </div>
+            </div>
 
+            <button className='add-to-cart'>ADD TO CART</button>
+
+            <div className='added-adv'>
+              <p>100% Original Products</p>
+              <p>Cash on delivery is available on this product</p>
+              <p>Cash return and exchange policy within 7 days</p>
             </div>
           </div>
 
-          <button className='add-to-cart'>ADD TO CART</button>
-
-          <div className='added-adv'>
-            <p>100% Original Products</p>
-            <p>Cash on delivery is available on this product</p>
-            <p>Cash return and exchange policy within 7 days</p>
-          </div>
         </div>
 
       </div>
