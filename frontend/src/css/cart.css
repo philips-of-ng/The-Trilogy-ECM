@@ -53,6 +53,10 @@
   border-radius: 5px;
 }
 
+.oci-mid input {
+  width: 30px;
+}
+
 .delete-btn {
   border: none;
   background-color: transparent;
