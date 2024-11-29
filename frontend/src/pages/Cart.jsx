@@ -12,6 +12,7 @@ const Cart = () => {
   useEffect(() => {
 
     const tempData = []
+
     for(const items in cartItems) {
       for(const item in cartItems[items]) {
         if (cartItems[items][item] > 0) {
@@ -25,6 +26,7 @@ const Cart = () => {
     }
 
     console.log(tempData);
+    setCartData(tempData)
   }, [cartItems])
 
   return (
@@ -41,8 +43,20 @@ const Cart = () => {
             const productData = products.find((product) => product._id === item._id);
 
             return (
-              <div key={index} className=''>
-                
+              <div key={index} className='one-cart-item'>
+                <div className='oci-img'>
+                  <img src={productData.image[0]} alt="" />
+                </div>
+
+                <div className='oci-text'>
+                  <h5>{productData.name}</h5>
+
+                  <div className='prod-details d-flex g-4 gap-4'>
+                    <p>{currency}{productData.price}</p>
+
+                    <p className='in-cart-size'>{item.size}</p>
+                  </div>
+                </div>
               </div>
             )
 
