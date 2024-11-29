@@ -13,8 +13,8 @@ const Cart = () => {
 
     const tempData = []
 
-    for(const items in cartItems) {
-      for(const item in cartItems[items]) {
+    for (const items in cartItems) {
+      for (const item in cartItems[items]) {
         if (cartItems[items][item] > 0) {
           tempData.push({
             _id: items,
@@ -44,26 +44,41 @@ const Cart = () => {
 
             return (
               <div key={index} className='one-cart-item'>
-                <div className='oci-img'>
-                  <img src={productData.image[0]} alt="" />
-                </div>
 
-                <div className='oci-text'>
-                  <h5>{productData.name}</h5>
+                <div className='oci-left'>
+                  <div className='oci-img'>
+                    <img src={productData.image[0]} alt="" />
+                  </div>
 
-                  <div className='prod-details d-flex g-4 gap-4'>
-                    <p>{currency}{productData.price}</p>
+                  <div className='oci-text'>
+                    <h5>{productData.name}</h5>
 
-                    <p className='in-cart-size'>{item.size}</p>
+                    <div className='prod-details d-flex g-4 gap-4'>
+                      <p>{currency}{productData.price}</p>
+
+                      <p className='in-cart-size'>{item.size}</p>
+                    </div>
                   </div>
                 </div>
+
+
+                <div className='oci-mid'>
+                  <input type="number" min={1} defaultValue={productData.quantity} />
+                </div>
+
+                <div className='oci-right'>
+                  <button className='delete-btn'>
+                    <i class='bx bx-trash'></i>
+                  </button>
+                </div>
+
               </div>
             )
 
           })
         }
       </div>
-      
+
     </div>
   )
 }
