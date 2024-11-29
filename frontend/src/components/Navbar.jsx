@@ -1,14 +1,16 @@
 import React, { useContext, useState } from 'react'
 import '../css/navbar.css'
 import { assets } from '../assets/assets'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 
 const Navbar = () => {
 
+  const navigate = useNavigate()
+
   const [visible, setVisible] = useState(false)
 
-  const { setShowSearch } = useContext(ShopContext)
+  const { setShowSearch, getCartCount } = useContext(ShopContext)
 
   return (
     <div className='navbar'>
@@ -51,9 +53,9 @@ const Navbar = () => {
       <div className='side-div'>
         <img className='search-btn' onClick={() => setShowSearch(true)} src={assets.search_icon} alt="" />
         <img className='profile-btn' src={assets.profile_icon} alt="" />
-        <div className='cart-div'>
-          <img src={assets.cart_icon} alt="" />
-          <p>27</p>
+        <div className='cart-div' onClick={() => navigate('/cart')}>
+          <img src={assets.cart_icon} alt="" onClick={() => navigate('/cart')} />
+          <p onClick={() => navigate('/cart')}>{getCartCount()}</p>
         </div>
         <img onClick={() => setVisible(true)} className='menu-btn' src={assets.menu_icon} alt="" />
       </div>

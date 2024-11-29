@@ -8,8 +8,7 @@ import RelatedProducts from './RelatedProducts'
 const Products = () => {
 
   const { productId } = useParams()
-  const { products } = useContext(ShopContext)
-  const { currency } = useContext(ShopContext)
+  const { products, currency, addToCart } = useContext(ShopContext)
 
   const [productData, setProductData] = useState({})
   const [image, setImage] = useState('')
@@ -33,14 +32,14 @@ const Products = () => {
   }, [productId, products])
 
 
-  useEffect(() => {
-    console.log(productData);
-    console.log('Product images is an array', Array.isArray(productData.image));
-  }, [productData])
+  // useEffect(() => {
+  //   console.log(productData);
+  //   console.log('Product images is an array', Array.isArray(productData.image));
+  // }, [productData])
 
-  useEffect(() => {
-    console.log(products);
-  })
+  // useEffect(() => {
+  //   console.log(products);
+  // }, [products])
 
 
   return productData ? (
@@ -116,7 +115,7 @@ const Products = () => {
               </div>
             </div>
 
-            <button className='add-to-cart'>ADD TO CART</button>
+            <button className='add-to-cart' onClick={() => addToCart(productData._id, size)}>ADD TO CART</button>
 
             <div className='added-adv'>
               <p>100% Original Products</p>
