@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
 
   const navigate = useNavigate()
 
@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className='navbar'>
 
       <div className='logo-div'>
-        <img src={assets.real_logo} alt="" />
+        <img className='cursor-pointer' onClick={() => navigate('/')} src={assets.real_logo} alt="" />
       </div>
 
       <div className='nav-div'>

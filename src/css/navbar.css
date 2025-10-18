@@ -119,12 +119,17 @@
   cursor: pointer;
 }
 
+.sidebar-body {
+  border-bottom: 2px solid grey;
+}
+
 .sidebar-body ul {
   list-style-type: none;
+  padding: 20px;
 }
 
 .sidebar-body ul a {
-  /* padding: 15px 20px; */
+  padding: 10px 20px;
   display: block;
   text-decoration: none;
 }

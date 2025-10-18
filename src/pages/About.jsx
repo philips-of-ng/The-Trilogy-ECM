@@ -8,16 +8,16 @@ const About = () => {
 
       <PageTitle text1={"About"} text2={'US'} sub={'Here is a little tale about our fashion empire'} />
 
-      <div className='about-page-main'>
+      <div className='about-page-main p-3'>
 
-        <article className='d-block my-3'>
+        <article className='d-block my-3 text-gray-600 text-lg'>
           <div className='d-flex gap-2'>
             <div className='col-6'>
               <p className=''>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, voluptatem neque excepturi et esse ipsum cum earum ipsam dicta voluptate laudantium, ab maxime magnam praesentium! Dolore alias vitae commodi quae!</p>
 
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil saepe officia reprehenderit aspernatur consequatur architecto?</p>
 
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod illum ab repellat aperiam ea sunt! Obcaecati eveniet nobis, iusto aspernatur debitis veritatis voluptatum, molestiae, nesciunt eligendi dicta delectus. Nam asperiores porro quidem earum, quisquam omnis dignissimos, ducimus eveniet ratione mollitia adipisci, voluptate inventore ea laborum suscipit! Harum similique itaque vel!
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod illum ab repellat aperiam ea sunt! Obcaecati eveniet nobis, iusto aspernatur debitis veritatis voluptatum, molestiae, nesciunt eligendi dicta delectus. Nam asperiores porro quidem earum, quisquam omnis dignissimos, ducimus eveniet ratione mollitia adipisci, voluptate inventore ea laborum suscipit! Harum similique itaque vel!</p>
             </div>
 
             <div className='col-6'>

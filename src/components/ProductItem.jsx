@@ -18,11 +18,6 @@ const ProductItem = ({ image, name, price, id }) => {
         <p className='product-name'>{name}</p>
         <p className='product-price'>{currency}{price}</p>
       </div>
-
-
-      
-
-
     </div>
   )
 }
